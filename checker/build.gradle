@@ -19,7 +19,7 @@ dependencies {
     implementation project(':framework')
     implementation "io.github.eisop:checker-qual:${versions.eisopVersion}"
 
-    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation platform('org.junit:junit-bom:6.0.1')
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation project(':test-utils')
