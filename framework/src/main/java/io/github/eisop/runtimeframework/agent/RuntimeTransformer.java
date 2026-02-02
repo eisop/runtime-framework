@@ -1,10 +1,10 @@
 package io.github.eisop.runtimeframework.agent;
 
 import io.github.eisop.runtimeframework.core.RuntimeChecker;
-import io.github.eisop.runtimeframework.core.RuntimeInstrumenter;
 import io.github.eisop.runtimeframework.filter.AnnotatedForFilter;
 import io.github.eisop.runtimeframework.filter.ClassInfo;
 import io.github.eisop.runtimeframework.filter.Filter;
+import io.github.eisop.runtimeframework.instrumentation.RuntimeInstrumenter;
 import java.lang.classfile.ClassFile;
 import java.lang.classfile.ClassModel;
 import java.lang.instrument.ClassFileTransformer;

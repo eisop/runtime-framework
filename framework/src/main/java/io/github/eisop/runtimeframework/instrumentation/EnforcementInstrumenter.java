@@ -1,10 +1,11 @@
-package io.github.eisop.runtimeframework.core;
+package io.github.eisop.runtimeframework.instrumentation;
 
+import io.github.eisop.runtimeframework.core.CheckGenerator;
 import io.github.eisop.runtimeframework.filter.ClassInfo;
 import io.github.eisop.runtimeframework.filter.Filter;
-import io.github.eisop.runtimeframework.policy.InstrumentationStrategy;
 import io.github.eisop.runtimeframework.resolution.HierarchyResolver;
 import io.github.eisop.runtimeframework.resolution.ParentMethod;
+import io.github.eisop.runtimeframework.strategy.InstrumentationStrategy;
 import java.lang.classfile.ClassBuilder;
 import java.lang.classfile.ClassModel;
 import java.lang.classfile.CodeBuilder;

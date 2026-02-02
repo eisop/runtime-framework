@@ -1,4 +1,4 @@
-package io.github.eisop.runtimeframework.core;
+package io.github.eisop.runtimeframework.instrumentation;
 
 import io.github.eisop.runtimeframework.filter.ClassInfo;
 import io.github.eisop.runtimeframework.filter.Filter;

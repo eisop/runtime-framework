@@ -1,6 +1,7 @@
-package io.github.eisop.runtimeframework.core;
+package io.github.eisop.runtimeframework.instrumentation;
 
-import io.github.eisop.runtimeframework.policy.InstrumentationStrategy;
+import io.github.eisop.runtimeframework.core.CheckGenerator;
+import io.github.eisop.runtimeframework.strategy.InstrumentationStrategy;
 import java.lang.classfile.ClassModel;
 import java.lang.classfile.CodeBuilder;
 import java.lang.classfile.CodeElement;

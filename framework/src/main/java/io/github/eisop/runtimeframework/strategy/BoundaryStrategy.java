@@ -1,4 +1,4 @@
-package io.github.eisop.runtimeframework.policy;
+package io.github.eisop.runtimeframework.strategy;
 
 import io.github.eisop.runtimeframework.core.CheckGenerator;
 import io.github.eisop.runtimeframework.core.TypeSystemConfiguration;
@@ -248,7 +248,15 @@ public class BoundaryStrategy implements InstrumentationStrategy {
     return null;
   }
 
-  private List<Annotation> getMethodParamAnnotations(MethodModel method, int paramIndex) {
+  protected List<Annotation> getMethodAnnotations(MethodModel method) {
+    List<Annotation> result = new ArrayList<>();
+    method
+        .findAttribute(Attributes.runtimeVisibleAnnotations())
+        .ifPresent(attr -> result.addAll(attr.annotations()));
+    return result;
+  }
+
+  protected List<Annotation> getMethodParamAnnotations(MethodModel method, int paramIndex) {
     List<Annotation> result = new ArrayList<>();
     method
         .findAttribute(Attributes.runtimeVisibleParameterAnnotations())
@@ -269,7 +277,7 @@ public class BoundaryStrategy implements InstrumentationStrategy {
     return result;
   }
 
-  private List<Annotation> getMethodReturnAnnotations(MethodModel method) {
+  protected List<Annotation> getMethodReturnAnnotations(MethodModel method) {
     List<Annotation> result = new ArrayList<>();
     method
         .findAttribute(Attributes.runtimeVisibleAnnotations())
@@ -287,7 +295,7 @@ public class BoundaryStrategy implements InstrumentationStrategy {
     return result;
   }
 
-  private List<Annotation> getFieldAnnotations(FieldModel field) {
+  protected List<Annotation> getFieldAnnotations(FieldModel field) {
     List<Annotation> result = new ArrayList<>();
     field
         .findAttribute(Attributes.runtimeVisibleAnnotations())
@@ -305,7 +313,7 @@ public class BoundaryStrategy implements InstrumentationStrategy {
     return result;
   }
 
-  private List<Annotation> getLocalVariableAnnotations(MethodModel method, int slot) {
+  protected List<Annotation> getLocalVariableAnnotations(MethodModel method, int slot) {
     List<Annotation> result = new ArrayList<>();
     method
         .code()

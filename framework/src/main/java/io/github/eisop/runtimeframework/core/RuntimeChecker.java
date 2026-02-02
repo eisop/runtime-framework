@@ -2,9 +2,10 @@ package io.github.eisop.runtimeframework.core;
 
 import io.github.eisop.runtimeframework.filter.ClassInfo;
 import io.github.eisop.runtimeframework.filter.Filter;
-import io.github.eisop.runtimeframework.policy.BoundaryStrategy;
-import io.github.eisop.runtimeframework.policy.InstrumentationStrategy;
-import io.github.eisop.runtimeframework.policy.StrictBoundaryStrategy;
+import io.github.eisop.runtimeframework.instrumentation.RuntimeInstrumenter;
+import io.github.eisop.runtimeframework.strategy.BoundaryStrategy;
+import io.github.eisop.runtimeframework.strategy.InstrumentationStrategy;
+import io.github.eisop.runtimeframework.strategy.StrictBoundaryStrategy;
 
 /**
  * Represents a specific type system or check to be enforced (e.g., Nullness, Immutability). This

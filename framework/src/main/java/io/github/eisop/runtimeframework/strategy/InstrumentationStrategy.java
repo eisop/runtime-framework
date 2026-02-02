@@ -1,4 +1,4 @@
-package io.github.eisop.runtimeframework.policy;
+package io.github.eisop.runtimeframework.strategy;
 
 import io.github.eisop.runtimeframework.core.CheckGenerator;
 import io.github.eisop.runtimeframework.resolution.ParentMethod;
